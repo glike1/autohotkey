@@ -14,11 +14,11 @@ Return
 
 #if GetKeyState("Capslock", "P")
 
-;实现u,n上下翻页,jkli上下左右,,.home和end
+;实现u,h上下翻页,jkli上下左右,]\ home和end
 u:: SendInput,{PgUp}
-n:: SendInput,{PgDn}
-,:: SendInput,{Home}
-.:: SendInput,{End}
+h:: SendInput,{PgDn}
+]:: SendInput,{Home}
+\:: SendInput,{End}
 j:: SendInput,{Left}
 k:: SendInput,{Down}
 l:: SendInput,{Right}
@@ -26,9 +26,9 @@ i:: SendInput,{Up}
 
 ;实现Shift+<-,->等
 +u:: SendInput,+{PgUp}
-+n:: SendInput,+{PgDn}
-+,:: SendInput,+{Home}
-+.:: SendInput,+{End}
++h:: SendInput,+{PgDn}
++]:: SendInput,+{Home}
++\:: SendInput,+{End}
 +j:: SendInput,+{Left}
 +k:: SendInput,+{Down}
 +i:: SendInput,+{Up}
@@ -36,9 +36,9 @@ i:: SendInput,{Up}
 
 ;实现Ctrl+<-,->等
 ^u:: SendInput,^{PgUp}
-^n:: SendInput,^{PgDn}
-^,:: SendInput,^{Home}
-^.:: SendInput,^{End}
+^h:: SendInput,^{PgDn}
+^]:: SendInput,^{Home}
+^\:: SendInput,^{End}
 ^j:: SendInput,^{Left}
 ^k:: SendInput,^{Down}
 ^i:: SendInput,^{Up}
@@ -46,9 +46,9 @@ i:: SendInput,{Up}
 
 ;实现alt+->,<-等
 !u:: SendInput,!{PgUp}
-!n:: SendInput,!{PgDn}
-!,:: SendInput,!{Home}
-!.:: SendInput,!{End}
+!h:: SendInput,!{PgDn}
+!]:: SendInput,!{Home}
+!\:: SendInput,!{End}
 !j:: SendInput,!{Left}
 !k:: SendInput,!{Down}
 !i:: SendInput,!{Up}
@@ -56,29 +56,19 @@ i:: SendInput,{Up}
 
 ;混合快捷键实现
 +^u:: SendInput,+^{PgUp}
-+^n:: SendInput,+^{PgDn}
-+^,:: SendInput,+^{Home}
-+^.:: SendInput,+^{End}
++^h:: SendInput,+^{PgDn}
++^]:: SendInput,+^{Home}
++^\:: SendInput,+^{End}
 +^j:: SendInput,+^{Left}
 +^k:: SendInput,+^{Down}
 +^i:: SendInput,+^{Up}
 +^l:: SendInput,+^{Right}
 
 ;混合快捷键实现
-+!u:: SendInput,+!{PgUp}
-+!n:: SendInput,+!{PgDn}
-+!,:: SendInput,+!{Home}
-+!.:: SendInput,+!{End}
-+!j:: SendInput,+!{Left}
-+!k:: SendInput,+!{Down}
-+!i:: SendInput,+!{Up}
-+!l:: SendInput,+!{Right}
-
-;混合快捷键实现
 ^!u:: SendInput,^!{PgUp}
-^!n:: SendInput,^!{PgDn}
-^!,:: SendInput,^!{Home}
-^!.:: SendInput,^!{End}
+^!h:: SendInput,^!{PgDn}
+^!]:: SendInput,^!{Home}
+^!\:: SendInput,^!{End}
 ^!j:: SendInput,^!{Left}
 ^!k:: SendInput,^!{Down}
 ^!i:: SendInput,^!{Up}
@@ -86,9 +76,9 @@ i:: SendInput,{Up}
 
 ;三个混合快捷键实现
 +^!u:: SendInput,+^!{PgUp}
-+^!n:: SendInput,+^!{PgDn}
-+^!,:: SendInput,+^!{Home}
-+^!.:: SendInput,+^!{End}
++^!h:: SendInput,+^!{PgDn}
++^!]:: SendInput,+^!{Home}
++^!\:: SendInput,+^!{End}
 +^!j:: SendInput,+^!{Left}
 +^!k:: SendInput,+^!{Down}
 +^!i:: SendInput,+^!{Up}

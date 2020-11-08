@@ -15,8 +15,8 @@ CapsLock::
         
             u:: SendInput,{PgUp}
             n:: SendInput,{PgDn}
-            ,:: SendInput,{Home}
-            .:: SendInput,{End}
+            m:: SendInput,{Home}
+            ,:: SendInput,{End}
             j:: SendInput,{Left}
             k:: SendInput,{Down}
             l:: SendInput,{Right}
@@ -24,8 +24,8 @@ CapsLock::
 
             +u:: SendInput,+{PgUp}
             +n:: SendInput,+{PgDn}
-            +,:: SendInput,+{Home}
-            +.:: SendInput,+{End}
+            +m:: SendInput,+{Home}
+            +,:: SendInput,+{End}
             +j:: SendInput,+{Left}
             +k:: SendInput,+{Down}
             +l:: SendInput,+{Right}
