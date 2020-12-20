@@ -1,9 +1,5 @@
 ;轻击为esc
-RWin::
-    GetKeyState, a, CapsLock, P
-    If (a="U")
-        SendInput, {Esc}
-Return
+RWin::  SendInput, {Esc}
 
 ;以下长按为组合键,Rwin对应热键前缀为>#
 >#Up::SendInput,   {PgUp}
