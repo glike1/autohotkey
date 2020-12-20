@@ -215,7 +215,6 @@ Return
 !<#>#-::SendInput,    !<#{F11}
 !<#>#=::SendInput,    !<#{F12}
 !<#>#BS::SendInput,   !<#{Del}
-!<#>#BS::SendInput,   !<#{Del}
 ;ctrl(^),shift(+),alt(!),Lwin(<#)三三组合，共有4种
 
 ;ctrl+shift+alt
