@@ -1,6 +1,5 @@
 ;轻击为esc
 RWin::
-    Sleep, 150
     GetKeyState, a, CapsLock, T
     If (a="U")
         SendInput, {Esc}
