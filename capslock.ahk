@@ -1,11 +1,14 @@
 ;轻击为esc
 RWin::  SendInput, {Esc}
 
-;Rwin+N为学号(number)
->#n::SendInput, 2018053307
+;Rwin+S为学号(Student Number)
+>#s::SendInput, 2018053307
 
-;Rwin+M为邮箱号(mailbox)
+;Rwin+M为邮箱号(Mailbox)
 >#m::SendInput,glike1@outlook.com
+
+;Rwin+P为手机号(Phone Number)
+>#p::SendInput, 13533235090
 
 ;以下长按为组合键,Rwin对应热键前缀为>#
 >#Up::SendInput,   {PgUp}

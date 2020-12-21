@@ -5,6 +5,11 @@
 3. Capslock+Backspace对应Delete
 4. 以及上述功能的加上ctrl,shft,alt,Lwin的组合键
 
+### 2020/12/21已完成功能:
+1. Capslock+M输出邮箱字符串(Mailbox)
+2. Capslock+S输出学号(Student Number)
+3. Capslock+P输出手机号(Phone Number)
+
 ### 目前已知Bug(就我这垃圾水平不可能修复得了的):
 1. RWin不可用(因为程序设计产生的问题)
 2. LWin和Capslock连用时,会在编辑器打出“<”字符串(可能是因为windows不允许两边的Win一起用?)
