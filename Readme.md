@@ -17,7 +17,6 @@
 
 ### 目前已知Bug(就我这垃圾水平不可能修复得了的):
 1. RAlt不可用(因为程序设计产生的问题)
-2. LWin和Capslock连用时,会在编辑器打出“<”字符串(可能是因为windows不允许两边的Win一起用?)
 
 ### 注意事项:
 使用前需要使用[sharpekeys](https://github.com/randyrants/sharpkeys)修改Capslock为RAlt

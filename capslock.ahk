@@ -31,7 +31,7 @@ RAlt::  SendInput, {Esc}
 >!i::SendInput,    {Up}
 >!k::SendInput,    {Down}
 >!j::SendInput,    {Left}
->!l::SendInput     {Right}
+>!l::SendInput,    {Right}
 >!w::SendInput,    {PgUp}
 >!s::SendInput,    {PgDn}
 >!a::SendInput,    {Home}
@@ -58,7 +58,7 @@ RAlt::  SendInput, {Esc}
 ^>!i::SendInput,    ^{Up}
 ^>!k::SendInput,    ^{Down}
 ^>!j::SendInput,    ^{Left}
-^>!l::SendInput     ^{Right}
+^>!l::SendInput,    ^{Right}
 ^>!w::SendInput,    ^{PgUp}
 ^>!s::SendInput,    ^{PgDn}
 ^>!a::SendInput,    ^{Home}
@@ -84,7 +84,7 @@ RAlt::  SendInput, {Esc}
 <!>!i::SendInput,    !{Up}
 <!>!k::SendInput,    !{Down}
 <!>!j::SendInput,    !{Left}
-<!>!l::SendInput     !{Right}
+<!>!l::SendInput,    !{Right}
 <!>!w::SendInput,    !{PgUp}
 <!>!s::SendInput,    !{PgDn}
 <!>!a::SendInput,    !{Home}
@@ -111,7 +111,7 @@ RAlt::  SendInput, {Esc}
 +>!i::SendInput,    +{Up}
 +>!k::SendInput,    +{Down}
 +>!j::SendInput,    +{Left}
-+>!l::SendInput     +{Right}
++>!l::SendInput,    +{Right}
 +>!w::SendInput,    +{PgUp}
 +>!s::SendInput,    +{PgDn}
 +>!a::SendInput,    +{Home}
@@ -167,7 +167,7 @@ RAlt::  SendInput, {Esc}
 ^+>!i::SendInput,    ^+{Up}
 ^+>!k::SendInput,    ^+{Down}
 ^+>!j::SendInput,    ^+{Left}
-^+>!l::SendInput     ^+{Right}
+^+>!l::SendInput,    ^+{Right}
 ^+>!w::SendInput,    ^+{PgUp}
 ^+>!s::SendInput,    ^+{PgDn}
 ^+>!a::SendInput,    ^+{Home}
@@ -194,7 +194,7 @@ RAlt::  SendInput, {Esc}
 ^<!>!i::SendInput,    ^!{Up}
 ^<!>!k::SendInput,    ^!{Down}
 ^<!>!j::SendInput,    ^!{Left}
-^<!>!l::SendInput     ^!{Right}
+^<!>!l::SendInput,    ^!{Right}
 ^<!>!w::SendInput,    ^!{PgUp}
 ^<!>!s::SendInput,    ^!{PgDn}
 ^<!>!a::SendInput,    ^!{Home}
@@ -221,7 +221,7 @@ RAlt::  SendInput, {Esc}
 ^<#>!i::SendInput,    ^<#{Up}
 ^<#>!k::SendInput,    ^<#{Down}
 ^<#>!j::SendInput,    ^<#{Left}
-^<#>!l::SendInput     ^<#{Right}
+^<#>!l::SendInput,    ^<#{Right}
 ^<#>!w::SendInput,    ^<#{PgUp}
 ^<#>!s::SendInput,    ^<#{PgDn}
 ^<#>!a::SendInput,    ^<#{Home}
@@ -248,7 +248,7 @@ RAlt::  SendInput, {Esc}
 +<!>!i::SendInput,    +!{Up}
 +<!>!k::SendInput,    +!{Down}
 +<!>!j::SendInput,    +!{Left}
-+<!>!l::SendInput     +!{Right}
++<!>!l::SendInput,    +!{Right}
 +<!>!w::SendInput,    +!{PgUp}
 +<!>!s::SendInput,    +!{PgDn}
 +<!>!a::SendInput,    +!{Home}
@@ -275,7 +275,7 @@ RAlt::  SendInput, {Esc}
 +<#>!i::SendInput,    +<#{Up}
 +<#>!k::SendInput,    +<#{Down}
 +<#>!j::SendInput,    +<#{Left}
-+<#>!l::SendInput     +<#{Right}
++<#>!l::SendInput,    +<#{Right}
 +<#>!w::SendInput,    +<#{PgUp}
 +<#>!s::SendInput,    +<#{PgDn}
 +<#>!a::SendInput,    +<#{Home}
@@ -302,7 +302,7 @@ RAlt::  SendInput, {Esc}
 <!<#>!i::SendInput,    !<#{Up}
 <!<#>!k::SendInput,    !<#{Down}
 <!<#>!j::SendInput,    !<#{Left}
-<!<#>!l::SendInput     !<#{Right}
+<!<#>!l::SendInput,    !<#{Right}
 <!<#>!w::SendInput,    !<#{PgUp}
 <!<#>!s::SendInput,    !<#{PgDn}
 <!<#>!a::SendInput,    !<#{Home}
@@ -330,7 +330,7 @@ RAlt::  SendInput, {Esc}
 ^+<!>!i::SendInput,    ^+!{Up}
 ^+<!>!k::SendInput,    ^+!{Down}
 ^+<!>!j::SendInput,    ^+!{Left}
-^+<!>!l::SendInput     ^+!{Right}
+^+<!>!l::SendInput,    ^+!{Right}
 ^+<!>!w::SendInput,    ^+!{PgUp}
 ^+<!>!s::SendInput,    ^+!{PgDn}
 ^+<!>!a::SendInput,    ^+!{Home}
@@ -357,7 +357,7 @@ RAlt::  SendInput, {Esc}
 ^+<#>!i::SendInput,    ^+<#{Up}
 ^+<#>!k::SendInput,    ^+<#{Down}
 ^+<#>!j::SendInput,    ^+<#{Left}
-^+<#>!l::SendInput     ^+<#{Right}
+^+<#>!l::SendInput,    ^+<#{Right}
 ^+<#>!w::SendInput,    ^+<#{PgUp}
 ^+<#>!s::SendInput,    ^+<#{PgDn}
 ^+<#>!a::SendInput,    ^+<#{Home}
@@ -384,7 +384,7 @@ RAlt::  SendInput, {Esc}
 ^<!<#>!i::SendInput,    ^!<#{Up}
 ^<!<#>!k::SendInput,    ^!<#{Down}
 ^<!<#>!j::SendInput,    ^!<#{Left}
-^<!<#>!l::SendInput     ^!<#{Right}
+^<!<#>!l::SendInput,    ^!<#{Right}
 ^<!<#>!w::SendInput,    ^!<#{PgUp}
 ^<!<#>!s::SendInput,    ^!<#{PgDn}
 ^<!<#>!a::SendInput,    ^!<#{Home}
@@ -411,7 +411,7 @@ RAlt::  SendInput, {Esc}
 +<!<#>!i::SendInput,    +!<#{Up}
 +<!<#>!k::SendInput,    +!<#{Down}
 +<!<#>!j::SendInput,    +!<#{Left}
-+<!<#>!l::SendInput     +!<#{Right}
++<!<#>!l::SendInput,    +!<#{Right}
 +<!<#>!w::SendInput,    +!<#{PgUp}
 +<!<#>!s::SendInput,    +!<#{PgDn}
 +<!<#>!a::SendInput,    +!<#{Home}
@@ -438,7 +438,7 @@ RAlt::  SendInput, {Esc}
 ^+<!<#>!i::SendInput,    ^+!<#{Up}
 ^+<!<#>!k::SendInput,    ^+!<#{Down}
 ^+<!<#>!j::SendInput,    ^+!<#{Left}
-^+<!<#>!l::SendInput     ^+!<#{Right}
+^+<!<#>!l::SendInput,    ^+!<#{Right}
 ^+<!<#>!w::SendInput,    ^+!<#{PgUp}
 ^+<!<#>!s::SendInput,    ^+!<#{PgDn}
 ^+<!<#>!a::SendInput,    ^+!<#{Home}
