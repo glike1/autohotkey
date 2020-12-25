@@ -1,5 +1,10 @@
-;轻击为esc
+﻿;轻击为esc
 RAlt::  SendInput, {Esc}
+
+>!.::SendInput, 。
+>!\::SendInput, 、
+>!<::SendInput, 《
+>!>::SendInput, 》
 
 ;Rwin+N为学号(Student Number)
 >!n::SendInput, 2018053307
