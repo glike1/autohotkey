@@ -1,6 +1,36 @@
 ﻿;轻击为esc
 RAlt::  SendInput, {Esc}
 
+;capslock+方括号表示亮度加减,引号和分号表示音量加减,capslock+enter表示静音/解除静音
+>!;::SendInput, {Volume_Down}
+>!'::SendInput, {Volume_Up}
+>!Enter::SendInput, {Volume_Mute}
+>![::AdjustScreenBrightness(-10)
+>!]::AdjustScreenBrightness(10)
+
+AdjustScreenBrightness(step) {
+    service := "winmgmts:{impersonationLevel=impersonate}!\\.\root\WMI"
+    monitors := ComObjGet(service).ExecQuery("SELECT * FROM WmiMonitorBrightness WHERE Active=TRUE")
+    monMethods := ComObjGet(service).ExecQuery("SELECT * FROM wmiMonitorBrightNessMethods WHERE Active=TRUE")
+    minBrightness := 0
+
+    for i in monitors {
+        curt := i.CurrentBrightness
+        break
+    }
+    toSet := curt + step
+    If (toSet > 100) {
+        Return
+    }
+    If (toSet < minBrightness) {
+        toSet := minBrightness
+    }
+
+    for i in monMethods {
+        i.WmiSetBrightness(1, toSet)
+        break
+    }
+}
 >!.::SendInput, 。
 >!\::SendInput, 、
 >!<::SendInput, 《

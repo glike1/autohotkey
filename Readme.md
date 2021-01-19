@@ -1,5 +1,10 @@
 # autohotkey自用脚本
 
+### 2020/1/20: 已完成功能:
+1. Capslock+[、]实现亮度加、减
+2. Capslock+;'实现音量加、减
+3. Capslock+enter 实现静音/解除静音
+
 ### 2020/12/20: 已完成功能:
 
 1. Capslock+(1~ =)对应F1~F12
