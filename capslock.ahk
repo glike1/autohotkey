@@ -153,31 +153,31 @@ AdjustScreenBrightness(step) {
 +>!d::SendInput,    +{End}
 
 ;新设置的组合键加上LWin键需要额外设置,LWin热键前缀为<#
-<#>!Up::SendInput,<#{PgUp}
-<#>!Down::SendInput,<#{PgDn}
-<#>!Left::SendInput,<#{Home}
-<#>!Right::SendInput,<#{End}
-<#>!1::SendInput,<#{F1}
-<#>!2::SendInput,<#{F2}
-<#>!3::SendInput,<#{F3}
-<#>!4::SendInput,<#{F4}
-<#>!5::SendInput,<#{F5}
-<#>!6::SendInput,<#{F6}
-<#>!7::SendInput,<#{F7}
-<#>!8::SendInput,<#{F8}
-<#>!9::SendInput,<#{F9}
-<#>!0::SendInput,<#{F10}
-<#>!-::SendInput,<#{F11}
-<#>!=::SendInput,<#{F12}
-<#>!BS::SendInput,   <#{Del}
-<#>!i::SendInput,    <#{Up}
-<#>!k::SendInput,    <#{Down}
-<#>!j::SendInput,    <#{Left}
-<#>!l::SendInput,    <#{Right}
-<#>!w::SendInput,    <#{PgUp}
-<#>!s::SendInput,    <#{PgDn}
-<#>!a::SendInput,    <#{Home}
-<#>!d::SendInput,    <#{End}
+<#>!Up::SendInput,#{PgUp}
+<#>!Down::SendInput,#{PgDn}
+<#>!Left::SendInput,#{Home}
+<#>!Right::SendInput,#{End}
+<#>!1::SendInput,#{F1}
+<#>!2::SendInput,#{F2}
+<#>!3::SendInput,#{F3}
+<#>!4::SendInput,#{F4}
+<#>!5::SendInput,#{F5}
+<#>!6::SendInput,#{F6}
+<#>!7::SendInput,#{F7}
+<#>!8::SendInput,#{F8}
+<#>!9::SendInput,#{F9}
+<#>!0::SendInput,#{F10}
+<#>!-::SendInput,#{F11}
+<#>!=::SendInput,#{F12}
+<#>!BS::SendInput,   #{Del}
+<#>!i::SendInput,    #{Up}
+<#>!k::SendInput,    #{Down}
+<#>!j::SendInput,    #{Left}
+<#>!l::SendInput,    #{Right}
+<#>!w::SendInput,    #{PgUp}
+<#>!s::SendInput,    #{PgDn}
+<#>!a::SendInput,    #{Home}
+<#>!d::SendInput,    #{End}
 
 ;ctrl(^),shift(+),alt(!),Lwin(<#)两两组合，共有6种
 
