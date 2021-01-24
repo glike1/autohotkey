@@ -1,5 +1,13 @@
-﻿;轻击为esc
-RAlt::  SendInput, {Esc}
+﻿~LCtrl::
+    KeyWait, LCtrl, T0.15
+    if not(ErrorLevel){
+        Send,{Esc}
+    }
+Return
+
+;Space轻击保持原来功能
+RAlt::SendInput, {Space}
+
 
 ;capslock+方括号表示亮度加减,引号和分号表示音量加减,capslock+enter表示静音/解除静音
 >!;::SendInput, {Volume_Down}

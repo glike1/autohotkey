@@ -1,7 +1,8 @@
 # autohotkey自用脚本
 ### 2021/1/24:已完成功能:
 1. 修复Capslock+win键会打出<的Bug
-
+2. 大改,Capslock转换为轻击为esc,长按为ctrl,空格键改为轻击为空格,长按为super键。
+即:空格+ikjl对应光标上下左右,空格+wsad对应PgUp,PgDn,End,Home
 ### 2021/1/20: 已完成功能:
 1. Capslock+[、]实现亮度加、减
 2. Capslock+;'实现音量加、减
