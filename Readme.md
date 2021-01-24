@@ -37,4 +37,4 @@
 
 ### 注意事项:
 
-使用前需要使用[sharpekeys](https://github.com/randyrants/sharpkeys)修改Capslock为RAlt
+使用前需要使用[sharpekeys](https://github.com/randyrants/sharpkeys)修改Capslock为RAlt、修改Space为Lctrl。
