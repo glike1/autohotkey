@@ -1,11 +1,4 @@
-﻿~LCtrl::
-    KeyWait, LCtrl, T0.15
-    if not(ErrorLevel){
-        Send,{Space}
-    }
-Return
-     
-;Space轻击保持原来功能
+﻿;Space轻击保持原来功能
 RAlt::SendInput, {Esc}
 
 
