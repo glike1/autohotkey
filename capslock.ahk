@@ -1,6 +1,8 @@
 ﻿;Space轻击保持原来功能
-RAlt::SendInput, {Esc}
+RAlt::SendInput, {Space}
 
+>!Esc::SendInput, ``
++Esc::SendInput, ~
 
 ;capslock+方括号表示亮度加减,引号和分号表示音量加减,capslock+enter表示静音/解除静音
 >!;::SendInput, {Volume_Down}
