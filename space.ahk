@@ -1,13 +1,15 @@
 ﻿;Space轻击保持原来功能
-RAlt::SendInput, {Esc}
->!/::SendInput, ?
+RAlt::SendInput, {Space}
 
+
+>!Esc::SendInput, ``
+<+Esc::SendInput, ~
 ;capslock+方括号表示亮度加减,引号和分号表示音量加减,capslock+enter表示静音/解除静音
->!g::SendInput, {Volume_Down}
->!h::SendInput, {Volume_Up}
->!f::SendInput, {Volume_Mute}
->!q::AdjustScreenBrightness(-10)
->!e::AdjustScreenBrightness(10)
+>!;::SendInput, {Volume_Down}
+>!'::SendInput, {Volume_Up}
+>!Enter::SendInput, {Volume_Mute}
+>![::AdjustScreenBrightness(-10)
+>!]::AdjustScreenBrightness(10)
 
 AdjustScreenBrightness(step) {
     service := "winmgmts:{impersonationLevel=impersonate}!\\.\root\WMI"
@@ -26,7 +28,6 @@ AdjustScreenBrightness(step) {
     If (toSet < minBrightness) {
         toSet := minBrightness
     }
-
     for i in monMethods {
         i.WmiSetBrightness(1, toSet)
         break
@@ -64,10 +65,10 @@ AdjustScreenBrightness(step) {
 >!-::SendInput,    {F11}
 >!=::SendInput,    {F12}
 >!BS::SendInput,   {Del}
->![::SendInput,    {Up}
->!'::SendInput,    {Down}
->!;::SendInput,    {Left}
->!enter::SendInput,    {Right}
+>!i::SendInput,    {Up}
+>!k::SendInput,    {Down}
+>!j::SendInput,    {Left}
+>!l::SendInput,    {Right}
 >!w::SendInput,    {PgUp}
 >!s::SendInput,    {PgDn}
 >!a::SendInput,    {Home}
@@ -91,10 +92,10 @@ AdjustScreenBrightness(step) {
 ^>!-::SendInput,^{F11}
 ^>!=::SendInput,^{F12}
 ^>!BS::SendInput,   ^{Del}
-^>![::SendInput,    ^{Up}
-^>!'::SendInput,    ^{Down}
-^>!;::SendInput,    ^{Left}
-^>!enter::SendInput,    ^{Right}
+^>!i::SendInput,    ^{Up}
+^>!k::SendInput,    ^{Down}
+^>!j::SendInput,    ^{Left}
+^>!l::SendInput,    ^{Right}
 ^>!w::SendInput,    ^{PgUp}
 ^>!s::SendInput,    ^{PgDn}
 ^>!a::SendInput,    ^{Home}
@@ -117,10 +118,10 @@ AdjustScreenBrightness(step) {
 <!>!-::SendInput,!{F11}
 <!>!=::SendInput,!{F12}
 <!>!BS::SendInput,   !{Del}
-<!>![::SendInput,    !{Up}
-<!>!'::SendInput,    !{Down}
-<!>!;::SendInput,    !{Left}
-<!>!enter::SendInput,    !{Right}
+<!>!i::SendInput,    !{Up}
+<!>!k::SendInput,    !{Down}
+<!>!j::SendInput,    !{Left}
+<!>!l::SendInput,    !{Right}
 <!>!w::SendInput,    !{PgUp}
 <!>!s::SendInput,    !{PgDn}
 <!>!a::SendInput,    !{Home}
@@ -144,10 +145,10 @@ AdjustScreenBrightness(step) {
 +>!-::SendInput,+{F11}
 +>!=::SendInput,+{F12}
 +>!BS::SendInput,   +{Del}
-+>![::SendInput,    +{Up}
-+>!'::SendInput,    +{Down}
-+>!;::SendInput,    +{Left}
-+>!enter::SendInput,    +{Right}
++>!i::SendInput,    +{Up}
++>!k::SendInput,    +{Down}
++>!j::SendInput,    +{Left}
++>!l::SendInput,    +{Right}
 +>!w::SendInput,    +{PgUp}
 +>!s::SendInput,    +{PgDn}
 +>!a::SendInput,    +{Home}
@@ -168,13 +169,13 @@ AdjustScreenBrightness(step) {
 <#>!8::SendInput,#{F8}
 <#>!9::SendInput,#{F9}
 <#>!0::SendInput,#{F10}
-<#>!-::SendInput,#{F11'}
+<#>!-::SendInput,#{F11}
 <#>!=::SendInput,#{F12}
 <#>!BS::SendInput,   #{Del}
-<#>![::SendInput,    #{Up}
-<#>!'::SendInput,    #{Down}
-<#>!;::SendInput,    #{Left}
-<#>!enter::SendInput,    #{Right}
+<#>!i::SendInput,    #{Up}
+<#>!k::SendInput,    #{Down}
+<#>!j::SendInput,    #{Left}
+<#>!l::SendInput,    #{Right}
 <#>!w::SendInput,    #{PgUp}
 <#>!s::SendInput,    #{PgDn}
 <#>!a::SendInput,    #{Home}
@@ -200,10 +201,10 @@ AdjustScreenBrightness(step) {
 ^+>!-::SendInput,^+{F11}
 ^+>!=::SendInput,^+{F12}
 ^+>!BS::SendInput,   ^+{Del}
-^+>![::SendInput,    ^+{Up}
-^+>!'::SendInput,    ^+{Down}
-^+>!;::SendInput,    ^+{Left}
-^+>!enter::SendInput,    ^+{Right}
+^+>!i::SendInput,    ^+{Up}
+^+>!k::SendInput,    ^+{Down}
+^+>!j::SendInput,    ^+{Left}
+^+>!l::SendInput,    ^+{Right}
 ^+>!w::SendInput,    ^+{PgUp}
 ^+>!s::SendInput,    ^+{PgDn}
 ^+>!a::SendInput,    ^+{Home}
@@ -227,10 +228,10 @@ AdjustScreenBrightness(step) {
 ^<!>!-::SendInput,^!{F11}
 ^<!>!=::SendInput,^!{F12}
 ^<!>!BS::SendInput,   ^!{Del}
-^<!>![::SendInput,    ^!{Up}
-^<!>!'::SendInput,    ^!{Down}
-^<!>!;::SendInput,    ^!{Left}
-^<!>!enter::SendInput,    ^!{Right}
+^<!>!i::SendInput,    ^!{Up}
+^<!>!k::SendInput,    ^!{Down}
+^<!>!j::SendInput,    ^!{Left}
+^<!>!l::SendInput,    ^!{Right}
 ^<!>!w::SendInput,    ^!{PgUp}
 ^<!>!s::SendInput,    ^!{PgDn}
 ^<!>!a::SendInput,    ^!{Home}
@@ -254,10 +255,10 @@ AdjustScreenBrightness(step) {
 ^<#>!-::SendInput,    ^<#{F11}
 ^<#>!=::SendInput,    ^<#{F12}
 ^<#>!BS::SendInput,   ^<#{Del}
-^<#>![::SendInput,    ^<#{Up}
-^<#>!'::SendInput,    ^<#{Down}
-^<#>!;::SendInput,    ^<#{Left}
-^<#>!enter::SendInput,    ^<#{Right}
+^<#>!i::SendInput,    ^<#{Up}
+^<#>!k::SendInput,    ^<#{Down}
+^<#>!j::SendInput,    ^<#{Left}
+^<#>!l::SendInput,    ^<#{Right}
 ^<#>!w::SendInput,    ^<#{PgUp}
 ^<#>!s::SendInput,    ^<#{PgDn}
 ^<#>!a::SendInput,    ^<#{Home}
@@ -281,10 +282,10 @@ AdjustScreenBrightness(step) {
 +<!>!-::SendInput,    +!{F11}
 +<!>!=::SendInput,    +!{F12}
 +<!>!BS::SendInput,   +!{Del}
-+<!>![::SendInput,    +!{Up}
-+<!>!'::SendInput,    +!{Down}
-+<!>!;::SendInput,    +!{Left}
-+<!>!enter::SendInput,    +!{Right}
++<!>!i::SendInput,    +!{Up}
++<!>!k::SendInput,    +!{Down}
++<!>!j::SendInput,    +!{Left}
++<!>!l::SendInput,    +!{Right}
 +<!>!w::SendInput,    +!{PgUp}
 +<!>!s::SendInput,    +!{PgDn}
 +<!>!a::SendInput,    +!{Home}
@@ -308,10 +309,10 @@ AdjustScreenBrightness(step) {
 +<#>!-::SendInput,    +<#{F11}
 +<#>!=::SendInput,    +<#{F12}
 +<#>!BS::SendInput,   +<#{Del}
-+<#>![::SendInput,    +<#{Up}
-+<#>!'::SendInput,    +<#{Down}
-+<#>!;::SendInput,    +<#{Left}
-+<#>!enter::SendInput,    +<#{Right}
++<#>!i::SendInput,    +<#{Up}
++<#>!k::SendInput,    +<#{Down}
++<#>!j::SendInput,    +<#{Left}
++<#>!l::SendInput,    +<#{Right}
 +<#>!w::SendInput,    +<#{PgUp}
 +<#>!s::SendInput,    +<#{PgDn}
 +<#>!a::SendInput,    +<#{Home}
@@ -335,10 +336,10 @@ AdjustScreenBrightness(step) {
 <!<#>!-::SendInput,    !<#{F11}
 <!<#>!=::SendInput,    !<#{F12}
 <!<#>!BS::SendInput,   !<#{Del}
-<!<#>![::SendInput,    !<#{Up}
-<!<#>!'::SendInput,    !<#{Down}
-<!<#>!;::SendInput,    !<#{Left}
-<!<#>!enter::SendInput,    !<#{Right}
+<!<#>!i::SendInput,    !<#{Up}
+<!<#>!k::SendInput,    !<#{Down}
+<!<#>!j::SendInput,    !<#{Left}
+<!<#>!l::SendInput,    !<#{Right}
 <!<#>!w::SendInput,    !<#{PgUp}
 <!<#>!s::SendInput,    !<#{PgDn}
 <!<#>!a::SendInput,    !<#{Home}
@@ -363,10 +364,10 @@ AdjustScreenBrightness(step) {
 ^+<!>!-::SendInput,    ^+!{F11}
 ^+<!>!=::SendInput,    ^+!{F12}
 ^+<!>!BS::SendInput,   ^+!{Del}
-^+<!>![::SendInput,    ^+!{Up}
-^+<!>!'::SendInput,    ^+!{Down}
-^+<!>!;::SendInput,    ^+!{Left}
-^+<!>!enter::SendInput,    ^+!{Right}
+^+<!>!i::SendInput,    ^+!{Up}
+^+<!>!k::SendInput,    ^+!{Down}
+^+<!>!j::SendInput,    ^+!{Left}
+^+<!>!l::SendInput,    ^+!{Right}
 ^+<!>!w::SendInput,    ^+!{PgUp}
 ^+<!>!s::SendInput,    ^+!{PgDn}
 ^+<!>!a::SendInput,    ^+!{Home}
@@ -390,10 +391,10 @@ AdjustScreenBrightness(step) {
 ^+<#>!-::SendInput,    ^+<#{F11}
 ^+<#>!=::SendInput,    ^+<#{F12}
 ^+<#>!BS::SendInput,   ^+<#{Del}
-^+<#>![::SendInput,    ^+<#{Up}
-^+<#>!'::SendInput,    ^+<#{Down}
-^+<#>!;::SendInput,    ^+<#{Left}
-^+<#>!enter::SendInput,    ^+<#{Right}
+^+<#>!i::SendInput,    ^+<#{Up}
+^+<#>!k::SendInput,    ^+<#{Down}
+^+<#>!j::SendInput,    ^+<#{Left}
+^+<#>!l::SendInput,    ^+<#{Right}
 ^+<#>!w::SendInput,    ^+<#{PgUp}
 ^+<#>!s::SendInput,    ^+<#{PgDn}
 ^+<#>!a::SendInput,    ^+<#{Home}
@@ -417,10 +418,10 @@ AdjustScreenBrightness(step) {
 ^<!<#>!-::SendInput,    ^!<#{F11}
 ^<!<#>!=::SendInput,    ^!<#{F12}
 ^<!<#>!BS::SendInput,   ^!<#{Del}
-^<!<#>![::SendInput,    ^!<#{Up}
-^<!<#>!'::SendInput,    ^!<#{Down}
-^<!<#>!;::SendInput,    ^!<#{Left}
-^<!<#>!enter::SendInput,    ^!<#{Right}
+^<!<#>!i::SendInput,    ^!<#{Up}
+^<!<#>!k::SendInput,    ^!<#{Down}
+^<!<#>!j::SendInput,    ^!<#{Left}
+^<!<#>!l::SendInput,    ^!<#{Right}
 ^<!<#>!w::SendInput,    ^!<#{PgUp}
 ^<!<#>!s::SendInput,    ^!<#{PgDn}
 ^<!<#>!a::SendInput,    ^!<#{Home}
@@ -444,10 +445,10 @@ AdjustScreenBrightness(step) {
 +<!<#>!-::SendInput,    +!<#{F11}
 +<!<#>!=::SendInput,    +!<#{F12}
 +<!<#>!BS::SendInput,   +!<#{Del}
-+<!<#>![::SendInput,    +!<#{Up}
-+<!<#>!'::SendInput,    +!<#{Down}
-+<!<#>!;::SendInput,    +!<#{Left}
-+<!<#>!enter::SendInput,    +!<#{Right}
++<!<#>!i::SendInput,    +!<#{Up}
++<!<#>!k::SendInput,    +!<#{Down}
++<!<#>!j::SendInput,    +!<#{Left}
++<!<#>!l::SendInput,    +!<#{Right}
 +<!<#>!w::SendInput,    +!<#{PgUp}
 +<!<#>!s::SendInput,    +!<#{PgDn}
 +<!<#>!a::SendInput,    +!<#{Home}
@@ -471,10 +472,10 @@ AdjustScreenBrightness(step) {
 ^+<!<#>!-::SendInput,    ^+!<#{F11}
 ^+<!<#>!=::SendInput,    ^+!<#{F12}
 ^+<!<#>!BS::SendInput,   ^+!<#{Del}
-^+<!<#>![::SendInput,    ^+!<#{Up}
-^+<!<#>!'::SendInput,    ^+!<#{Down}
-^+<!<#>!;::SendInput,    ^+!<#{Left}
-^+<!<#>!enter::SendInput,    ^+!<#{Right}
+^+<!<#>!i::SendInput,    ^+!<#{Up}
+^+<!<#>!k::SendInput,    ^+!<#{Down}
+^+<!<#>!j::SendInput,    ^+!<#{Left}
+^+<!<#>!l::SendInput,    ^+!<#{Right}
 ^+<!<#>!w::SendInput,    ^+!<#{PgUp}
 ^+<!<#>!s::SendInput,    ^+!<#{PgDn}
 ^+<!<#>!a::SendInput,    ^+!<#{Home}
