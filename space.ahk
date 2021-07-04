@@ -87,3 +87,9 @@ p::SendInput, 13533235090
 =::F12
 BackSpace::Delete
 Enter::Volume_Mute
+w::MouseMove, 0, -10, 0, R
+s::MouseMove, 0, 10, 0, R
+a::MouseMove, -10, 0, 0, R
+d::MouseMove, 10, 0, 0, R
+q::Click
+e::Click,Right
