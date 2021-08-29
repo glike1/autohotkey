@@ -26,7 +26,6 @@ if not A_IsAdmin
     Run *RunAs "%A_ScriptFullPath%" 
     ExitApp
 }
-Esc::`
 ;disable layer key and all the combination
 $space::
     KeyWait, Space, T.3
@@ -44,7 +43,7 @@ Return
 #!Space::Return
 #+Space::Return
 #^Space::Return
-^!+space::Return
+^!+Space::Return
 ^!#Space::Return
 ^+#Space::Return
 +!#Space::Return 
