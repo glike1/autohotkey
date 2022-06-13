@@ -1,94 +1,44 @@
-﻿AdjustScreenBrightness(step) {
-    service := "winmgmts:{impersonationLevel=impersonate}!\\.\root\WMI"
-    monitors := ComObjGet(service).ExecQuery("SELECT * FROM WmiMonitorBrightness WHERE Active=TRUE")
-    monMethods := ComObjGet(service).ExecQuery("SELECT * FROM wmiMonitorBrightNessMethods WHERE Active=TRUE")
-    minBrightness := 0
+﻿;SpaceFn
+#inputlevel,2
+$Space::
+    SetMouseDelay -1
+    Send {Blind}{F24 DownR}
+    KeyWait, Space
+    Send {Blind}{F24 up}
+    ; MsgBox, %A_ThisHotkey%-%A_TimeSinceThisHotkey%
+    if(A_ThisHotkey="$Space" and A_TimeSinceThisHotkey<300)
+        Send {Blind}{Space DownR}
+return
 
-    for i in monitors {
-        curt := i.CurrentBrightness
-        break
-    }
-    toSet := curt + step
-    If (toSet > 100) {
-        Return
-    }
-    If (toSet < minBrightness) {
-        toSet := minBrightness
-    }
-    for i in monMethods {
-        i.WmiSetBrightness(1, toSet)
-        break
-    }
-}
+#inputlevel,1
+F24 & i::Up
+F24 & k::Down
+F24 & j::Left
+F24 & l::Right
+F24 & u::Home
+F24 & o::End
+F24 & n::PgUp
+F24 & m::PgDn
 
-if not A_IsAdmin
-{
-    Run *RunAs "%A_ScriptFullPath%" 
-    ExitApp
-}
-;disable layer key and all the combination
-$space::
-    KeyWait, Space, T.3
-    If Not ErrorLevel{
-        Send {Space}
-    }
-Return
-!space::Return
-+space::Return 
-^space::Return
-#Space::Return
-!+space::Return
-^!space::Return
-^+space::Return
-#!Space::Return
-#+Space::Return
-#^Space::Return
-^!+Space::Return
-^!#Space::Return
-^+#Space::Return
-+!#Space::Return 
+F24 & 1::F1
+F24 & 2::F2
+F24 & 3::F3
+F24 & 4::F4
+F24 & 5::F5
+F24 & 6::F6
+F24 & 7::F7
+F24 & 8::F8
+F24 & 9::F9
+F24 & 0::F10
+F24 & -::F11
+F24 & =::F12
 
-$Ctrl::
-    KeyWait, Ctrl, T.5
-    if Not ErrorLevel{
-        Send, {Esc}
-    }
-Return
-#If, GetKeyState("space","P") 
-    i::Up
-k::Down
-j::Left 
-l::Right
-u::Home
-o::End
-[::AdjustScreenBrightness(-10)
-]::AdjustScreenBrightness(10)
-`;::Volume_Down
-'::Volume_Up
-\::SendInput, 、
-.::SendInput, 。
-<::SendInput, 《
->::SendInput, 》
-m::SendInput, glike1@outlook.com
-n::SendInput, 2018053307
-p::SendInput, 13533235090
-1::F1
-2::F2
-3::F3
-4::F4
-5::F5
-6::F6
-7::F7
-8::F8
-9::F9
-0::F10
--::F11
-=::F12
-BackSpace::Delete
-Enter::Volume_Mute
-w::MouseMove, 0, -10, 0, R
-s::MouseMove, 0, 10, 0, R
-a::MouseMove, -10, 0, 0, R
-d::MouseMove, 10, 0, 0, R
-q::Click
-e::Click,Right
+F24 & `;::Volume_Down
+F24 & '::Volume_Up
+F24 & Enter::Volume_Mute
+
+;Ctrl+S 重加载
+; ~^s::
+; sleep 500
+; Reload
+; return
