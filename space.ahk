@@ -37,6 +37,8 @@ F24 & `;::Volume_Down
 F24 & '::Volume_Up
 F24 & Enter::Volume_Mute
 
+F24 & Esc::`
+
 ;Ctrl+S 重加载
 ; ~^s::
 ; sleep 500
